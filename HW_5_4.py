@@ -2,14 +2,14 @@ def input_error(func):
     def inner(*args, **kwargs):
         try:
             return func(*args, **kwargs)
-        except (KeyError, ValueError, IndexError) as e:
-            if isinstance(e, KeyError):
+        except KeyError:
                 return "Contact not found."
-            elif isinstance(e, ValueError):
+        except ValueError:
                 return "Invalid format. Use: [command] [name] [phone]"
-            elif isinstance(e, IndexError):
+        except IndexError:
                 return "Enter user name and phone please."
     return inner
+
 
 @input_error
 def add_contact(args, contacts):
