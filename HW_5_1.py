@@ -1,5 +1,5 @@
 # ФУНКЦІЯ caching_fibonacci
-def caching_fibonacci(n):
+def caching_fibonacci():
 #     Створити порожній словник cache
     cache = {}
 #     ФУНКЦІЯ fibonacci(n)
@@ -21,7 +21,7 @@ def caching_fibonacci(n):
 #     Повернути функцію fibonacci
     return fibonacci
 # КІНЕЦЬ ФУНКЦІЇ caching_fibonacci
-fib = caching_fibonacci(55)
+fib = caching_fibonacci()
 
 # Використовуємо функцію fibonacci для обчислення чисел Фібоначчі
-print(fib(55))  
+print(fib(10))  
